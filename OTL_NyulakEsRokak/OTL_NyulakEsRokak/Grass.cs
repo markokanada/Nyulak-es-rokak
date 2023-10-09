@@ -8,5 +8,8 @@ namespace OTL_NyulakEsRokak
 {
 	internal class Grass
 	{
+		public Grass()
+		{
+		}
 	}
 }
