@@ -9,7 +9,7 @@ namespace OTL_NyulakEsRokak
 	internal class Foxes
 	{
 		public int SatietyMeter;
-		public static int MaximumStapDistance = 2;
+		public static int MaximumStepDistance = 2;
 
 		public Foxes(int satietyMeter)
 		{
@@ -18,7 +18,7 @@ namespace OTL_NyulakEsRokak
 		
 		public int EatingRabbit(int nutritionalValue)
 		{
-			if (nutritionalValue < 5 && nutritionalValue + SatietyMeter <= 5) 
+			if (nutritionalValue < 10 && nutritionalValue + SatietyMeter <= 10) 
 			{
 				SatietyMeter += nutritionalValue;
 				return SatietyMeter;

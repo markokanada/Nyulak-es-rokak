@@ -8,5 +8,7 @@ namespace OTL_NyulakEsRokak
 {
 	internal class Rabbits
 	{
+		private int SatietyMeter;
+		static int MaximumStepDistance = 1;
 	}
 }
