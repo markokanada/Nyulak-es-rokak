@@ -15,7 +15,7 @@ namespace OTL_NyulakEsRokak
 		{
 			SatietyMeter = satietyMeter;
 		}
-
+		
 		public void EatingRabbit()
 		{
 			SatietyMeter -= 1;
