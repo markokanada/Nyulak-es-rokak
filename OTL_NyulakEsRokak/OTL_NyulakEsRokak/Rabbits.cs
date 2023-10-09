@@ -36,6 +36,11 @@ namespace OTL_NyulakEsRokak
 			return 0;
 		}
 
-	//	public int GotEaten()
+		public int GotEaten(Foxes fox)
+		{
+			SatietyMeter = 0;
+			fox.EatingRabbit(2);
+			return SatietyMeter;
+		}
 	}
 }
