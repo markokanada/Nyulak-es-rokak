@@ -26,9 +26,17 @@ namespace OTL_NyulakEsRokak
 			return SatietyMeter;
 		}
 
-		public void DidntHadFood()
+		public int DidntHadFood()
 		{
 			SatietyMeter -= 1;
+			if (SatietyMeter <= 0)
+			{
+				return -1;
+			}
+			else
+			{
+				return 0;
+			}
 		}
 	}
 }
