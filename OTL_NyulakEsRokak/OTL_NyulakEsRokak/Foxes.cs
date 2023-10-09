@@ -16,7 +16,17 @@ namespace OTL_NyulakEsRokak
 			SatietyMeter = satietyMeter;
 		}
 		
-		public void EatingRabbit()
+		public int EatingRabbit(int nutritionalValue)
+		{
+			if (nutritionalValue < 5 && nutritionalValue + SatietyMeter <= 5) 
+			{
+				SatietyMeter += nutritionalValue;
+				return SatietyMeter;
+			}
+			return SatietyMeter;
+		}
+
+		public void DidntHadFood()
 		{
 			SatietyMeter -= 1;
 		}
