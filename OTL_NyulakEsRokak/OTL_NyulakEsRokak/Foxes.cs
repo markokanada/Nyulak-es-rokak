@@ -62,9 +62,9 @@ namespace OTL_NyulakEsRokak
 			else return false;
 		}
 
-		public int[] GetFreeSpace(bool isThereFreeSpace, Dictionary<int[], string> surroundings, int[] foxiesPosition)
+		public int[] GetFreeSpace(Dictionary<int[], string> surroundings, int[] foxiesPosition)
 		{
-			if (isThereFreeSpace == true)
+			if (surroundings.Count > 0)
 			{
 				foreach (var item in surroundings)
 				{
@@ -86,10 +86,7 @@ namespace OTL_NyulakEsRokak
 						{
 							return item.Key;
 						}
-						else
-						{
-							return foxiesPosition;
-						}
+						return foxiesPosition;
 					}
 					else if (item.Key[1] == foxiesPosition[1] && item.Value == "")
 					{
@@ -109,10 +106,7 @@ namespace OTL_NyulakEsRokak
 						{
 							return item.Key;
 						}
-						else
-						{
-							return foxiesPosition;
-						}
+						return foxiesPosition;
 					}
 					else if (item.Value == "" && item.Key[0] + 1 == foxiesPosition[0])
 					{
@@ -124,10 +118,7 @@ namespace OTL_NyulakEsRokak
 						{
 							return item.Key;
 						}
-						else
-						{
-							return foxiesPosition;
-						}
+						return foxiesPosition;
 					}
 					else if (item.Value == "" && item.Key[0] - 1 == foxiesPosition[0])
 					{
@@ -139,18 +130,12 @@ namespace OTL_NyulakEsRokak
 						{
 							return item.Key;
 						}
-						else
-						{
-							return foxiesPosition;
-						}
-					}
-					else
-					{
 						return foxiesPosition;
 					}
+					return foxiesPosition;
 				}
 			}
-			return foxiesPosition;	
+			return foxiesPosition;
 		}
 
 		//public int[] Moving(Dictionary<int[], string> surroundings, Foxes foxy, int[] foxiesPosition)
@@ -163,6 +148,10 @@ namespace OTL_NyulakEsRokak
 		//	{
 		//		//foxy.Recreate();
 		//		return foxiesPosition;
+		//	}
+		//	else
+		//	{
+		//		return GetFreeSpace(surroundings)
 		//	}
 		//}
 	}
