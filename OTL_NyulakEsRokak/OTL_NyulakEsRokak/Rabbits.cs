@@ -9,6 +9,7 @@ namespace OTL_NyulakEsRokak
 	internal class Rabbits
 	{
 		private int SatietyMeter;
+		public static int NutritionScore = 3;
 		public static int MaximumStepDistance = 1;
 
 		public Rabbits(int satietyMeter)
