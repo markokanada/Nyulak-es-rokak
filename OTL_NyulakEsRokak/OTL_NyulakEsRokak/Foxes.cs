@@ -138,6 +138,21 @@ namespace OTL_NyulakEsRokak
 			return foxiesPosition;
 		}
 
+		public int[] Recreate(Dictionary<int[], string> surroundings, int[] foxiesPosition)
+		{
+			foreach (var item in surroundings)
+			{
+				if (item.Key[0] == foxiesPosition[0] && item.Value == "")
+				{
+					if (item.Key[1] + 1 == foxiesPosition[1])
+					{
+
+					}
+					(item.Key[1] - 1 == foxiesPosition[1]
+				}
+			}
+		}
+
 		public int[] Moving(Dictionary<int[], string> surroundings, Foxes foxy, int[] foxiesPosition)
 		{
 			if (surroundings.ContainsValue("rabbit"))
