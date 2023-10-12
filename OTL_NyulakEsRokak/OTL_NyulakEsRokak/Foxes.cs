@@ -146,11 +146,26 @@ namespace OTL_NyulakEsRokak
 				{
 					if (item.Key[1] + 1 == foxiesPosition[1])
 					{
-
+						return item.Key;
 					}
-					(item.Key[1] - 1 == foxiesPosition[1]
+					else if (item.Key[1] - 1 == foxiesPosition[1])
+					{
+						return item.Key;
+					}
+				}
+				else if (item.Key[1] == foxiesPosition[1] && item.Value == "")
+				{
+					if (item.Key[0] + 1 == foxiesPosition[0])
+					{
+						return item.Key;
+					}
+					else if (item.Key[0] - 1 == foxiesPosition[0])
+					{
+						return item.Key;
+					}
 				}
 			}
+			return new int[] { -100, -100 };
 		}
 
 		public int[] Moving(Dictionary<int[], string> surroundings, Foxes foxy, int[] foxiesPosition)
@@ -161,8 +176,7 @@ namespace OTL_NyulakEsRokak
 			}
 			else if (ValidToRecreate(surroundings, foxiesPosition))
 			{
-				//foxy.Recreate();
-				return foxiesPosition;
+				return foxy.Recreate(surroundings, foxiesPosition);
 			}
 			else
 			{
