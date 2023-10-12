@@ -138,21 +138,21 @@ namespace OTL_NyulakEsRokak
 			return foxiesPosition;
 		}
 
-		//public int[] Moving(Dictionary<int[], string> surroundings, Foxes foxy, int[] foxiesPosition)
-		//{
-		//	if (surroundings.ContainsValue("rabbit"))
-		//	{
-		//		return surroundings.First(x => x.Value == "rabbit").Key;
-		//	}
-		//	else if (ValidToRecreate(surroundings, foxiesPosition))
-		//	{
-		//		//foxy.Recreate();
-		//		return foxiesPosition;
-		//	}
-		//	else
-		//	{
-		//		return GetFreeSpace(surroundings)
-		//	}
-		//}
+		public int[] Moving(Dictionary<int[], string> surroundings, Foxes foxy, int[] foxiesPosition)
+		{
+			if (surroundings.ContainsValue("rabbit"))
+			{
+				return surroundings.First(x => x.Value == "rabbit").Key;
+			}
+			else if (ValidToRecreate(surroundings, foxiesPosition))
+			{
+				//foxy.Recreate();
+				return foxiesPosition;
+			}
+			else
+			{
+				return GetFreeSpace(surroundings, foxiesPosition);
+			}
+		}
 	}
 }
