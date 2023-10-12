@@ -62,24 +62,107 @@ namespace OTL_NyulakEsRokak
 			else return false;
 		}
 
+		public int[] GetFreeSpace(bool isThereFreeSpace, Dictionary<int[], string> surroundings, int[] foxiesPosition)
+		{
+			if (isThereFreeSpace == true)
+			{
+				foreach (var item in surroundings)
+				{
+					if (item.Key[0] == foxiesPosition[0] && item.Value == "")
+					{
+						if (item.Key[1] - 1 == foxiesPosition[1])
+						{
+							return item.Key;
+						}
+						else if (item.Key[1] + 1 == foxiesPosition[1])
+						{
+							return item.Key;
+						}
+						else if (item.Key[1] - 2 == foxiesPosition[1])
+						{
+							return item.Key;
+						}
+						else if (item.Key[1] + 2 == foxiesPosition[1])
+						{
+							return item.Key;
+						}
+						else
+						{
+							return foxiesPosition;
+						}
+					}
+					else if (item.Key[1] == foxiesPosition[1] && item.Value == "")
+					{
+						if (item.Key[0] - 1 == foxiesPosition[0])
+						{
+							return item.Key;
+						}
+						else if (item.Key[0] + 1 == foxiesPosition[0])
+						{
+							return item.Key;
+						}
+						else if (item.Key[0] - 2 == foxiesPosition[0])
+						{
+							return item.Key;
+						}
+						else if (item.Key[0] + 2 == foxiesPosition[0])
+						{
+							return item.Key;
+						}
+						else
+						{
+							return foxiesPosition;
+						}
+					}
+					else if (item.Value == "" && item.Key[0] + 1 == foxiesPosition[0])
+					{
+						if (item.Key[1] + 1 == foxiesPosition[1])
+						{
+							return item.Key;
+						}
+						else if (item.Key[1] - 1 == foxiesPosition[1])
+						{
+							return item.Key;
+						}
+						else
+						{
+							return foxiesPosition;
+						}
+					}
+					else if (item.Value == "" && item.Key[0] - 1 == foxiesPosition[0])
+					{
+						if (item.Key[1] + 1 == foxiesPosition[1])
+						{
+							return item.Key;
+						}
+						else if (item.Key[1] - 1 == foxiesPosition[1])
+						{
+							return item.Key;
+						}
+						else
+						{
+							return foxiesPosition;
+						}
+					}
+					else
+					{
+						return foxiesPosition;
+					}
+				}
+			}
+			return foxiesPosition;	
+		}
+
 		//public int[] Moving(Dictionary<int[], string> surroundings, Foxes foxy, int[] foxiesPosition)
 		//{
 		//	if (surroundings.ContainsValue("rabbit"))
 		//	{
 		//		return surroundings.First(x => x.Value == "rabbit").Key;
 		//	}
-		//	else if (surroundings.ContainsValue("fox"))
+		//	else if (ValidToRecreate(surroundings, foxiesPosition))
 		//	{
-		//		foreach(var item in surroundings)
-		//		{
-		//			if (item.Value == "fox" && (item.Key[0] == foxiesPosition[0] && (item.Key[1] - 1 == foxiesPosition[1] || item.Key[1] + 1 == foxiesPosition[1])))
-		//			{
-						
-		//				//foxy.recreate();
-		//				return foxiesPosition;
-		//			}
-		//		}
-				
+		//		//foxy.Recreate();
+		//		return foxiesPosition;
 		//	}
 		//}
 	}
