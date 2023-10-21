@@ -45,6 +45,8 @@ namespace OTL_NyulakEsRokak
             }
         }
 
+
+
         public void PlaceGrass(int x, int y, int nutritionalValue)
         {
             if (x >= 0 && x < width && y >= 0 && y < height)
@@ -68,38 +70,6 @@ namespace OTL_NyulakEsRokak
             {
                 Foxes fox = new Foxes(satietyMeter);
                 foxesList.Add(fox);
-            }
-        }
-
-        public void SimulateRound()
-        {
-            GrowGrass();
-        }
-        public string GetGrassType(int x, int y)
-        {
-            if (x >= 0 && x < width && y >= 0 && y < height)
-            {
-                return grassMatrix[x, y].GetTheTypeOfGrass();
-            }
-            else
-            {
-                return "Invalid Coordinates";
-            }
-        }
-
-
-        private void GrowGrass()
-        {
-            for (int i = 0; i < width; i++)
-            {
-                for (int j = 0; j < height; j++)
-                {
-                    // Fű nő, ha nincs nyúl vagy róka a területen
-                    if (grassMatrix[i, j].NutritionalValue < 2)
-                    {
-                        grassMatrix[i, j] = new Grass(grassMatrix[i, j].NutritionalValue + 1);
-                    }
-                }
             }
         }
     }
