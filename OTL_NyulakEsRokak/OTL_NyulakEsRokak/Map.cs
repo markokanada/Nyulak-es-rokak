@@ -11,6 +11,9 @@ namespace OTL_NyulakEsRokak
             
         private readonly int width;
         private readonly int height;
+        private readonly Random random = new Random();
+        private readonly Grass[,] grassMatrix;
+
 
         //Map settings
         public Map(int width, int height)
@@ -19,5 +22,18 @@ namespace OTL_NyulakEsRokak
             this.height = height;
 
         }
+
+        private void InitializeMap()
+        {
+            for (int i = 0; i < width; i++)
+            {
+                for (int j = 0; j < height; j++)
+                {
+                    grassMatrix[i, j] = new Grass(0);
+                }
+            }
+        }
+
+
     }
 }
