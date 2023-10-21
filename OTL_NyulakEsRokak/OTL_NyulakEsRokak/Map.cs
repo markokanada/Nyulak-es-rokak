@@ -100,7 +100,7 @@ namespace OTL_NyulakEsRokak
             {
                 for (int j = 0; j < height; j++)
                 {
-                    // Fű nő, ha nincs nyúl vagy róka a területen
+
                     if (grassMatrix[i, j].NutritionalValue < 2)
                     {
                         grassMatrix[i, j] = new Grass(grassMatrix[i, j].NutritionalValue + 1);
