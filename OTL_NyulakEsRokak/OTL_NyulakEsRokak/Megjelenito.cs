@@ -51,6 +51,9 @@ namespace OTL_NyulakEsRokak
                 counter++;
             }
 
+            Console.SetCursorPosition(Convert.ToInt32((w - 0 - sorhossz3) * 0.5), Convert.ToInt32(h * 0.95));
+            Console.WriteLine(brand3);
+
         }
     }
 }
