@@ -39,19 +39,22 @@ namespace OTL_NyulakEsRokak
 
                 for (int i = 0; i < menuItems.Length; i++)
                 {
+                    for (int l = 0; l < (this.w - menuItems[i].Length) / 2; l++)
+                    {
+                        Console.Write(" ");
+                    }
                     if (i == selectedIndex)
                     {
                         Console.ForegroundColor = ConsoleColor.Black;
-                        Console.Write("\t");
                         Console.BackgroundColor = ConsoleColor.White;
-                        Console.Write("  " + menuItems[i] + "  \n");
+
+                        Console.Write($" {menuItems[i]} \n");
                         Console.ResetColor();
                         Console.ForegroundColor = ConsoleColor.Green;
                     }
                     else
                     {
-                        Console.Write("\t");
-                        Console.Write("  " + menuItems[i] + "  \n");
+                        Console.Write($" {menuItems[i]} \n");
                     }
 
                     Console.WriteLine("\n");
