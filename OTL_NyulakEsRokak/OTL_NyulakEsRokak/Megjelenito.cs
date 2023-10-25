@@ -1,11 +1,9 @@
 ﻿using System;
 namespace OTL_NyulakEsRokak
 {
-	public class Megjelenito
+	public static class Megjelenito
 	{
-		public Megjelenito()
-		{
-		}
+		
 	}
 }
 
