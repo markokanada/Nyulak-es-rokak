@@ -39,7 +39,7 @@ namespace OTL_NyulakEsRokak
 
                 for (int i = 0; i < menuItems.Length; i++)
                 {
-                    for (int l = 0; l < (this.w - menuItems[i].Length) / 2; l++)
+                    for (int l = 0; l < (w - menuItems[i].Length) / 2; l++)
                     {
                         Console.Write(" ");
                     }
