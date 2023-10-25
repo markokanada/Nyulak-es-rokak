@@ -90,8 +90,42 @@ namespace OTL_NyulakEsRokak
                 Console.SetCursorPosition(Convert.ToInt32((w - 0 - sorhossz3) * 0.5), Convert.ToInt32(h * 0.95));
                 Console.WriteLine(brand3);
 
-            }
-        }
+                ConsoleKeyInfo keyInfo = Console.ReadKey();
+
+                if (keyInfo.Key == ConsoleKey.UpArrow)
+                {
+                    selectedIndex--;
+
+                    if (selectedIndex < 0)
+                    {
+                        selectedIndex = menuItems.Length - 1;
+                    }
+                }
+                else if (keyInfo.Key == ConsoleKey.DownArrow)
+                {
+                    selectedIndex++;
+
+                    if (selectedIndex >= menuItems.Length)
+                    {
+                        selectedIndex = 0;
+                    }
+                }
+                else if (keyInfo.Key == ConsoleKey.Enter)
+                {
+                    Console.Clear();
+                    if (menuItems[selectedIndex] == "  Játék  ")
+                    {
+                        //játék
+                    }
+
+                    if (menuItems[selectedIndex] == " Kilépés  ")
+                    {
+                        System.Environment.Exit(0);
+                    }
+
+
+                        Console.ReadKey();
+                    
     }
 }
 
