@@ -116,7 +116,7 @@ namespace OTL_NyulakEsRokak
                 else if (keyInfo.Key == ConsoleKey.Enter)
                 {
                     Console.Clear();
-                    if (menuItems[selectedIndex] == "  Játék  ")
+                    if (menuItems[selectedIndex] == "Játék")
                     {
                         Console.Write("Mekkor legyen a térkép?");
                         int mapSize = int.Parse(Console.ReadLine());
@@ -165,7 +165,7 @@ namespace OTL_NyulakEsRokak
 
                         }
 
-                        if (menuItems[selectedIndex] == " Kilépés  ")
+                        if (menuItems[selectedIndex] == "Kilépés")
                         {
                             System.Environment.Exit(0);
                         }
