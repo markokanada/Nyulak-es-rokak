@@ -26,6 +26,15 @@ namespace OTL_NyulakEsRokak
             int sormagassag = file.Count();
             int counter = 0;
 
+            string brand2 = "brand2.txt";
+            var file2 = File.ReadAllLines(brand2);
+            int sorhossz2 = file2[0].ToCharArray().Length;
+            int sormagassag2 = file2.Count();
+            int counter2 = 0;
+
+            string brand3 = "Készült a One of The Lot által";
+            int sorhossz3 = brand3.ToCharArray().Count();
+
         }
     }
 }
