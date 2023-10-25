@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Diagnostics.Metrics;
+
 namespace OTL_NyulakEsRokak
 {
 	public class Megjelenito
@@ -34,6 +36,20 @@ namespace OTL_NyulakEsRokak
 
             string brand3 = "Készült a One of The Lot által";
             int sorhossz3 = brand3.ToCharArray().Count();
+
+            foreach (var sor2 in file2)
+            {
+                Console.SetCursorPosition(Convert.ToInt32((w - 0 - sorhossz2) * 0.5), (Convert.ToInt32(sormagassag * 1.4)) + counter2);
+                Console.WriteLine(sor2);
+                counter2++;
+            }
+
+            foreach (var sor in file)
+            {
+                Console.SetCursorPosition(Convert.ToInt32((w - 0 - sorhossz) * 0.5), 1 + counter);
+                Console.WriteLine(sor);
+                counter++;
+            }
 
         }
     }

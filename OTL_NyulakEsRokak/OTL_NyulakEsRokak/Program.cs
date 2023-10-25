@@ -1,5 +1,10 @@
 ﻿using OTL_NyulakEsRokak;
 
+Megjelenito megjelenito = new();
+
+megjelenito.menuMegjelenites();
+Console.ReadKey();
+/*
 Console.Write("Mekkor legyen a térkép?");
 int mapSize = int.Parse(Console.ReadLine());
 Console.Write("Hány kört szeretnél játszani?");
@@ -44,4 +49,6 @@ static void PrintMap(Map map)
         Console.WriteLine();
     }
     Console.WriteLine();
-}
+
+*/
+//}
