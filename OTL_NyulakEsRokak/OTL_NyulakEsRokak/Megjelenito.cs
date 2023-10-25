@@ -16,12 +16,12 @@ namespace OTL_NyulakEsRokak
         public void menuMegjelenites()
         {
             Console.Clear();
-            int spacing = (h - 15) / 6;
+            int spacing = (int)(h * 0.2);
 
             Console.Title = "\tOne of The Lot - Nyulak és Rókák";
             Console.ForegroundColor = ConsoleColor.Green;
 
-            string[] menuItems = { "Játék", "Kilépés"};
+            string[] menuItems = { "Játék", "Kilépés" };
             int selectedIndex = 0;
 
             Console.CursorVisible = false;
@@ -163,13 +163,16 @@ namespace OTL_NyulakEsRokak
                         }
 
                         if (menuItems[selectedIndex] == " Kilépés  ")
-                    {
-                        System.Environment.Exit(0);
-                    }
+                        {
+                            System.Environment.Exit(0);
+                        }
 
 
                         Console.ReadKey();
-                    
+                    }
+                }
+            }
+        }
     }
 }
 
