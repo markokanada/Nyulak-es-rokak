@@ -10,6 +10,11 @@ namespace OTL_NyulakEsRokak
         {
 
         }
+
+        public void menuMegjelenites()
+        {
+
+        }
     }
 }
 
