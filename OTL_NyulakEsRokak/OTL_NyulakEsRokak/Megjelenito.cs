@@ -5,6 +5,11 @@ namespace OTL_NyulakEsRokak
 {
 	public class Megjelenito
 	{
+        public int NumberTestRead()
+        {
+
+        }
+
         public int w = Console.WindowWidth;
         public int h = Console.WindowHeight;
 
