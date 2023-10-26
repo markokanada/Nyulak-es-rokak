@@ -140,9 +140,9 @@ namespace OTL_NyulakEsRokak
                     if (menuItems[selectedIndex] == "Játék")
                     {
                         Console.Write("Mekkor legyen a térkép?");
-                        int mapSize = int.Parse(Console.ReadLine());
+                        int mapSize = NumberTestRead();
                         Console.Write("Hány kört szeretnél játszani?");
-                        int roundNumber = int.Parse(Console.ReadLine());
+                        int roundNumber = NumberTestRead();
 
                         Map gameMap = new Map(mapSize, mapSize);
 
