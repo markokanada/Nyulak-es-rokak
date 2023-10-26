@@ -7,7 +7,23 @@ namespace OTL_NyulakEsRokak
 	{
         public int NumberTestRead()
         {
+            int number;
+            bool isNumeric = false;
 
+            do
+            {
+                Console.Write(" Kérem, adjon meg egy számot:");
+                string userInput = Console.ReadLine();
+                isNumeric = int.TryParse(userInput, out number);
+
+                if (!isNumeric)
+                {
+                    Console.WriteLine("Rossz formátum! Kérem, adjon meg egy érvényes számot.");
+                }
+
+            } while (!isNumeric);
+
+            return number;
         }
 
         public int w = Console.WindowWidth;
