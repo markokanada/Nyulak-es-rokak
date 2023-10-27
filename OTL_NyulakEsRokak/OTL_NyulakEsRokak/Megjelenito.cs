@@ -152,7 +152,7 @@ namespace OTL_NyulakEsRokak
 
 
                         int round = 1;
-
+                        Console.Clear();
                         while (roundNumber > 0)
                         {
                             gameMap.SimulateRound();
@@ -167,6 +167,8 @@ namespace OTL_NyulakEsRokak
 
                             round++;
                         }
+                        Console.WriteLine("\n\tVége a játéknak.");
+                        Console.WriteLine("Nyomj [ENTERT], hogy ki tudj lépni.");
 
 
                         static void PrintMap(Map map)
