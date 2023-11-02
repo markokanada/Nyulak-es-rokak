@@ -52,6 +52,7 @@ namespace OTL_NyulakEsRokak
             if (x >= 0 && x < width && y >= 0 && y < height)
             {
                 grassMatrix[x, y] = new Grass(nutritionalValue);
+               
             }
         }
 

@@ -187,15 +187,16 @@ namespace OTL_NyulakEsRokak
                             Console.WriteLine();
 
                         }
-
-                        if (menuItems[selectedIndex] == "Kilépés")
-                        {
-                            System.Environment.Exit(0);
-                        }
-
-
-                        Console.ReadKey();
                     }
+                    
+                    
+                    if (menuItems[selectedIndex] == "Kilépés")
+                    {
+                        System.Environment.Exit(0);
+                    }
+
+
+                    Console.ReadKey();
                 }
             }
         }
