@@ -18,7 +18,9 @@ namespace OTL_NyulakEsRokak
 
                 if (!isNumeric)
                 {
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Rossz formátum! Kérem, adjon meg egy érvényes számot.");
+                    Console.ForegroundColor = ConsoleColor.Green;
                 }
 
             } while (!isNumeric);
@@ -157,11 +159,14 @@ namespace OTL_NyulakEsRokak
                         {
                             gameMap.SimulateRound();
 
-                            Console.WriteLine($"Kör {round} állapota:");
+                            Console.WriteLine($"\t Kör {round} állapota:");
+                            Console.WriteLine();
                             PrintMap(gameMap);
 
-                            Console.WriteLine("Nyomj Enter-t a következő körhöz...");
+                            Console.WriteLine();
+                            Console.WriteLine(" Nyomj Enter-t a következő körhöz...");
                             Console.ReadLine();
+                            
                             roundNumber--;
                             Console.Clear();
 
