@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace OTL_NyulakEsRokak
 {
-	internal class Grass
+	internal class Grass : Entyti
 	{
 		public Grass(int nutritionalValue)
 		{
 			NutritionalValue = nutritionalValue;
 		}
 
-		public int NutritionalValue { get; init; }
+		public int NutritionalValue { get; set; }
 
 		public string GetTheTypeOfGrass()
 		{
@@ -23,7 +23,7 @@ namespace OTL_NyulakEsRokak
 			}
 			else if (this.NutritionalValue == 1)
 			{
-				return "Zsenge fű";
+				return "Zsenge Fű";
 			}
 			else if (this.NutritionalValue == 2)
 			{
@@ -33,5 +33,19 @@ namespace OTL_NyulakEsRokak
 
 		}
 
-    }
+		public override Map SimulatingRound(Map map)
+		{
+			if (NutritionalValue < 2)
+			{
+				NutritionalValue += 1;
+			}
+			return map;
+		}
+
+		public override string ToString()
+		{
+			return this.GetTheTypeOfGrass();
+		}
+
+	}
 }

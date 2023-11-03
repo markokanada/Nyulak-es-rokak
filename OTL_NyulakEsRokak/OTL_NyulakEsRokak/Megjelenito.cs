@@ -150,19 +150,23 @@ namespace OTL_NyulakEsRokak
 
                         gameMap.PlaceGrass(1, 1, 2);
                         gameMap.PlaceRabbit(2, 2, 3);
-                        gameMap.PlaceFox(3, 3, 5);
+                        gameMap.PlaceFox(2, 3, 5);
+						gameMap.PlaceRabbit(2, 4, 3);
+						gameMap.PlaceFox(2, 5, 5);
+                        
 
 
-                        int round = 1;
+						int round = 1;
                         Console.Clear();
                         while (roundNumber > 0)
                         {
-                            gameMap.SimulateRound();
+							//PrintMap2(gameMap);
+							gameMap.SimulateRound(gameMap);
 
                             Console.WriteLine($"\t Kör {round} állapota:");
                             Console.WriteLine();
-                            PrintMap(gameMap);
-
+                           // PrintMap(gameMap);
+                            PrintMap2(gameMap);
                             Console.WriteLine();
                             Console.WriteLine(" Nyomj Enter-t a következő körhöz...");
                             Console.ReadLine();
@@ -192,7 +196,24 @@ namespace OTL_NyulakEsRokak
                             Console.WriteLine();
 
                         }
-                    }
+
+						static void PrintMap2(Map map)
+						{
+							int width = map.GetWidth();
+							int height = map.GetHeight();
+
+							for (int i = 0; i < width; i++)
+							{
+								for (int j = 0; j < height; j++)
+								{
+                                    Console.Write(map.entytis[i,j].ToString() + "\t"); ;
+								}
+								Console.WriteLine();
+							}
+							Console.WriteLine();
+
+						}
+					}
                     
                     
                     if (menuItems[selectedIndex] == "Kilépés")

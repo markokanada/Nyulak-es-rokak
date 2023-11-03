@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OTL_NyulakEsRokak
 {
-	internal class Foxes
+	internal class Foxes : Entyti
 	{
 		public int SatietyMeter;
 		public static int MaximumStepDistance = 2;
@@ -183,5 +183,12 @@ namespace OTL_NyulakEsRokak
 				return GetFreeSpace(surroundings, foxiesPosition);
 			}
 		}
+
+		public override string ToString()
+		{
+			return "róka";
+		}
+
+		
 	}
 }

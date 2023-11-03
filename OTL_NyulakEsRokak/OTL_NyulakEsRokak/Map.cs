@@ -13,6 +13,7 @@ namespace OTL_NyulakEsRokak
         private readonly int height;
         private readonly Random random = new Random();
         private readonly Grass[,] grassMatrix;
+        public readonly Entyti[,] entytis;
         private readonly List<Rabbits> rabbitsList = new List<Rabbits>();
         private readonly List<Foxes> foxesList = new List<Foxes>();
         public int GetWidth()
@@ -30,6 +31,7 @@ namespace OTL_NyulakEsRokak
             this.width = width;
             this.height = height;
             grassMatrix = new Grass[width, height];
+            entytis = new Entyti[width, height];
 
             InitializeMap();
         }
@@ -41,6 +43,7 @@ namespace OTL_NyulakEsRokak
                 for (int j = 0; j < height; j++)
                 {
                      grassMatrix[i, j] = new Grass(0);
+                    entytis[i, j] = new Grass(0);
                 }
             }
         }
@@ -61,6 +64,7 @@ namespace OTL_NyulakEsRokak
             if (x >= 0 && x < width && y >= 0 && y < height)
             {
                 Rabbits rabbit = new Rabbits(satietyMeter);
+                entytis[x,y] = rabbit;
                 rabbitsList.Add(rabbit);
             }
         }
@@ -70,15 +74,25 @@ namespace OTL_NyulakEsRokak
             if (x >= 0 && x < width && y >= 0 && y < height)
             {
                 Foxes fox = new Foxes(satietyMeter);
+                entytis[x,y] = fox;
                 foxesList.Add(fox);
             }
         }
 
 
 
-        public void SimulateRound()
+        public void SimulateRound(Map map)
         {
-            GrowGrass();
+            //GrowGrass();
+            Console.WriteLine(foxesList.Count);
+            Console.WriteLine(rabbitsList.Count);
+            for (int i = 0; i < width; i++)
+            {
+                for (int j = 0; j < height; j++)
+                {
+                    entytis[i, j].SimulatingRound(map);
+                }
+            }
         }
 
 
